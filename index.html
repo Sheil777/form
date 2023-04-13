@@ -14,14 +14,30 @@
                 .save();
         }
     </script>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 7px;
+        }
+        .invoice {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <div id="invoice">
+    <div id="invoice" class="invoice">
         <form action="">
-            <label for="name">Имя: </label><input id="name" type="text">
-            
+            <label for="name">Имя: </label><input id="name" type="text"><br>
+            <label for="surname">Фамилия: </label><input id="surname" type="text">
         </form>
-    </div>
+    </div><br>
     <button onclick="generatePDF()">Сохранить в PDF</button>
     <script src="html2pdf.js-master/dist/html2pdf.bundle.min.js"></script>
 </body>
