@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function generatePDF() {
+            const element = document.getElementById('invoice');
+            console.log(element)
+            html2pdf()
+                .from(element)
+                .save();
+        }
+    </script>
+</head>
+<body>
+    <div id="invoice">
+        <form action="">
+            <label for="name">Имя: </label><input id="name" type="text">
+            
+        </form>
+    </div>
+    <button onclick="generatePDF()">Сохранить в PDF</button>
+    <script src="html2pdf.js-master/dist/html2pdf.bundle.min.js"></script>
+</body>
+</html>
